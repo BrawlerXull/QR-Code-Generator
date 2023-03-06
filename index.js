@@ -5,6 +5,7 @@ app.use(express.json());
 
 app.get("/",(req,res)=>{
     console.log("hello");
+    res.send("hello");
 })
 
 app.post("/",(req,res)=>{
