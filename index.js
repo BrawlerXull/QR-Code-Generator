@@ -8,11 +8,14 @@ app.get("/",(req,res)=>{
     res.send("hello");
 })
 
+var ans = "";
+
 app.post("/",(req,res)=>{
     QRCode.toDataURL(req.body.qr_code_text, function (err, url) {
         console.log(url)
+        ans=url;
       })
-    res.send("ok");
+    res.send({"qr_link":"ans"});
 })
 
 
